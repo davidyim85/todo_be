@@ -12,9 +12,3 @@ class TodoSerializer(serializers.HyperlinkedModelSerializer):
         # fields to show in json
         fields = ('id', 'subject', 'details')
 
-
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = User
-        fields = ["id", "name", "password"]
-
