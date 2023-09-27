@@ -1,6 +1,6 @@
 from .models import Todo
 from rest_framework import serializers
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User
 
 ## Class TodoSerializer is a subclass of serializers.HyperlinkedModelSerializer.
 ## For serializing and deserializing data into representations such as json.
@@ -16,9 +16,5 @@ class TodoSerializer(serializers.HyperlinkedModelSerializer):
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ['url', 'username', 'email', 'groups']
+        fields = ["id", "name", "password"]
 
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Group
-        fields = ['url', 'name']
