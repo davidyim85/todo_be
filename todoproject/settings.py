@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "todos.apps.TodosConfig",
     "rest_framework",
+    "rest_framework_simplejwt",
     "corsheaders",
 ]
 
@@ -73,6 +74,8 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+
+
 
 ROOT_URLCONF = 'todoproject.urls'
 
